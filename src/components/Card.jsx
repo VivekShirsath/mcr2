@@ -8,6 +8,7 @@ export const Card = (data) => {
 
     const handleEdit = (e) => {
         e.stopPropagation();
+       setDetails(false);
        setOpen(true);
     }
 
@@ -22,12 +23,15 @@ export const Card = (data) => {
         const update = habits.map((habit) => habit.name === data.name ? {...habit,
         Isarchive:true} : habit);
         setHabits(update);
+        setDetails(false);
+        setOpen(false);
     }
 
     const handleDetails = (e) => {  
         e.stopPropagation();
         e.preventDefault();
         setDetails(true);
+        setOpen(false);
     }
     
     return(
