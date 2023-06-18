@@ -1,12 +1,16 @@
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Archive } from './pages/Archive';
 import './App.css'
 
 function App() {
-
   return (
-    <div>
-   <div className='text-blue-800'>Hello</div>
-    </div>
+   <Routes>
+    <Route>
+      <Route path="/"element={<Home/>}/>
+      <Route path="/archive"element={<Archive/>}/>
+    </Route>
+   </Routes>
   )
 }
 
