@@ -5,7 +5,7 @@ import { Modal } from "../components/Modal";
 import { Card } from "../components/Card";
 
 export const Home = () => {
-    const {habits,setModalOpen,modalOpen} = useHabits();
+    const {habits,setModalOpen,modalOpen,setOpen} = useHabits();
 
     const handleAdd = () => {
         setModalOpen(true);

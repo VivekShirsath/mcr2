@@ -7,25 +7,24 @@ export const Card = (data) => {
     const {open,setOpen,habits,setHabits,openDetails,setDetails}= useHabits();
 
     const handleEdit = (e) => {
+        e.stopPropagation();
        setOpen(true);
-       e.stopPropagation();
     }
 
     const handleDelete = (e) => {
+        e.stopPropagation();
         const update= habits.filter((habit) => habit.name !== data.name);
         setHabits(update);
-        e.stopPropagation();
     }
 
     const handleArchive = (e) => {
+        e.stopPropagation();
         const update = habits.map((habit) => habit.name === data.name ? {...habit,
         Isarchive:true} : habit);
         setHabits(update);
-        e.stopPropagation();
     }
 
-    const handleDetails = (e) => {
-        console.log("inside");
+    const handleDetails = (e) => {  
         e.stopPropagation();
         e.preventDefault();
         setDetails(true);

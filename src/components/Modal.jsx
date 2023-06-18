@@ -18,6 +18,9 @@ export const Modal = () => {
     }
 
     const handleSave = () => {
+        if(data.name === "" || data.repeat === "" || data.goal === "" || data.time === "" ||data.start_date=== "" ){
+            return;
+        }
         setHabits([...habits,data]);
         setModalOpen(false);
     }
