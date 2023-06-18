@@ -8,7 +8,6 @@ export const Card = (data) => {
 
     const handleEdit = (e) => {
         e.stopPropagation();
-       setDetails(false);
        setOpen(true);
     }
 
@@ -31,7 +30,6 @@ export const Card = (data) => {
         e.stopPropagation();
         e.preventDefault();
         setDetails(true);
-        setOpen(false);
     }
     
     return(
